@@ -25,7 +25,7 @@ function App() {
     [null, null, null]
   ];
   
-  let gameBoard = initialGameBoard;
+  let gameBoard = [...initialGameBoard].map(innerArr => [...innerArr]);
   
   for (const turn of gameTurns) {
     const { square, player } = turn;
